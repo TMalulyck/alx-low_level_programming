@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "lists.h"
 
 /**
@@ -25,3 +26,28 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	return (new);
 }
+=======
+#include "lists.h"
+
+/**
+ * dlistint_len - returns the number of nodes in a doubly linked list
+ * @h: pointer to the list
+ *
+ * Return: number of nodes
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t nodes = 0;
+
+	if (!h)
+		return (0);
+
+	while (h)
+	{
+		nodes++;
+		h = h->next;
+	}
+
+	return (nodes);
+}
+>>>>>>> 17c6bf077f7acdf84293a41ffc3f52d66c629c25
